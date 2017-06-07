@@ -1,5 +1,6 @@
 'use strict'
 const childProcess = require('child_process')
+const expandHomeDir = require('expand-home-dir')
 
 const {promisify} = require('@carnesen/util')
 const fs = require('fs-extra')
@@ -24,6 +25,7 @@ module.exports = {
   ensureDir: promisify(fs.ensureDir),
   exec: promisifyChildProcessMethod('exec'),
   execFile: promisifyChildProcessMethod('execFile'),
+  expandHomeDir: expandHomeDir,
   readdir: promisify(fs.readdir),
   readFile: promisify(fs.readFile),
   remove: promisify(fs.remove),
