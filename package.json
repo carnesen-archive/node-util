@@ -1,0 +1,36 @@
+{
+  "name": "@carnesen/node-util",
+  "description": "Utilities for Node.js",
+  "version": "0.0.0",
+  "main": "./src/index.js",
+  "scripts": {
+    "lint": "eslint src --config carnesen",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "mocha --opts test/mocha.opts"
+  },
+  "dependencies": {
+    "@carnesen/util": "0.4.3",
+    "fs-extra": "^3.0.1",
+    "tmp": "0.0.31"
+  },
+  "devDependencies": {
+    "chai": "4.0.2",
+    "eslint": "3.19.0",
+    "eslint-config-carnesen": "1.0.7",
+    "mocha": "3.4.2"
+  },
+  "author": {
+    "name": "Chris Arnesen",
+    "email": "chris.arnesen@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/carnesen/node-util.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carnesen/node-util/issues"
+  },
+  "homepage": "https://github.com/carnesen/node-util",
+  "license": "MIT"
+}
